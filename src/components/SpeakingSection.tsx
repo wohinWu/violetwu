@@ -1,34 +1,24 @@
+import { useTranslation } from "react-i18next";
 import AnimatedSection from "./AnimatedSection";
 import { MapPin, Calendar } from "lucide-react";
 
-const talks = [
-  {
-    title: "Visual Narratives: Photography as Testimony",
-    event: "TEDx Shanghai",
-    date: "March 2024",
-    location: "Shanghai, China",
-  },
-  {
-    title: "The Ethics of Documentary Photography",
-    event: "World Press Photo Festival",
-    date: "November 2023",
-    location: "Amsterdam, Netherlands",
-  },
-  {
-    title: "From Street to Gallery: Bridging Commercial and Fine Art",
-    event: "Photo London",
-    date: "May 2023",
-    location: "London, UK",
-  },
-];
+type Talk = {
+  title: string;
+  event: string;
+  date: string;
+  location: string;
+};
 
 const SpeakingSection = () => {
+  const { t } = useTranslation();
+  const talks = t("speaking.talks", { returnObjects: true }) as Talk[];
+
   return (
     <AnimatedSection id="speaking" className="py-24 md:py-32 px-8 md:px-16">
       <div className="max-w-4xl">
-        <p className="text-xs font-body tracking-[0.3em] uppercase text-primary mb-6">Speaking</p>
+        <p className="text-xs font-body tracking-[0.3em] uppercase text-primary mb-6">{t("speaking.label")}</p>
         <h2 className="font-display text-3xl md:text-4xl font-semibold mb-12">
-          Talks & Events
+          {t("speaking.title")}
         </h2>
         <div className="grid gap-6">
           {talks.map((talk, i) => (

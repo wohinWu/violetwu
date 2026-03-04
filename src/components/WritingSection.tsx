@@ -1,40 +1,29 @@
+import { useTranslation } from "react-i18next";
 import AnimatedSection from "./AnimatedSection";
 import { ExternalLink } from "lucide-react";
 
-const articles = [
-  {
-    title: "The Art of Seeing: A Photographer's Guide to Visual Storytelling",
-    publication: "Aperture Magazine",
-    date: "2024",
-    link: "#",
-  },
-  {
-    title: "Between Light and Shadow: Finding Beauty in Urban Landscapes",
-    publication: "National Geographic",
-    date: "2023",
-    link: "#",
-  },
-  {
-    title: "Documentary Photography in the Age of Social Media",
-    publication: "The Guardian",
-    date: "2023",
-    link: "#",
-  },
-];
+type Article = {
+  title: string;
+  publication: string;
+  date: string;
+};
 
 const WritingSection = () => {
+  const { t } = useTranslation();
+  const articles = t("writing.articles", { returnObjects: true }) as Article[];
+
   return (
     <AnimatedSection id="writing" className="py-24 md:py-32 px-8 md:px-16">
       <div className="max-w-4xl">
-        <p className="text-xs font-body tracking-[0.3em] uppercase text-primary mb-6">Writing</p>
+        <p className="text-xs font-body tracking-[0.3em] uppercase text-primary mb-6">{t("writing.label")}</p>
         <h2 className="font-display text-3xl md:text-4xl font-semibold mb-12">
-          Published Works
+          {t("writing.title")}
         </h2>
         <div className="space-y-0 divide-y divide-border">
           {articles.map((article, i) => (
             <AnimatedSection key={article.title} delay={i * 0.1}>
               <a
-                href={article.link}
+                href="#"
                 className="flex items-start justify-between py-6 group"
               >
                 <div>

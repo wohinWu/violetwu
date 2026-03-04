@@ -1,33 +1,30 @@
+import { useTranslation } from "react-i18next";
 import AnimatedSection from "./AnimatedSection";
 
-const skills = [
-  { name: "Portrait Photography", level: 95 },
-  { name: "Documentary", level: 90 },
-  { name: "Street Photography", level: 85 },
-  { name: "Post-Production", level: 88 },
-  { name: "Lighting Design", level: 92 },
-  { name: "Art Direction", level: 80 },
-];
+const skillKeys = ["portrait", "documentary", "street", "postProduction", "lighting", "artDirection"] as const;
+const skillLevels = [95, 90, 85, 88, 92, 80];
 
 const SkillsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <AnimatedSection id="skills" className="py-24 md:py-32 px-8 md:px-16">
       <div className="max-w-4xl">
-        <p className="text-xs font-body tracking-[0.3em] uppercase text-primary mb-6">Skills</p>
+        <p className="text-xs font-body tracking-[0.3em] uppercase text-primary mb-6">{t("skills.label")}</p>
         <h2 className="font-display text-3xl md:text-4xl font-semibold mb-12">
-          Craftsmanship & Expertise
+          {t("skills.title")}
         </h2>
         <div className="grid gap-6">
-          {skills.map((skill, i) => (
-            <AnimatedSection key={skill.name} delay={i * 0.1}>
+          {skillKeys.map((key, i) => (
+            <AnimatedSection key={key} delay={i * 0.1}>
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-body text-foreground">{skill.name}</span>
-                <span className="text-xs font-body text-muted-foreground">{skill.level}%</span>
+                <span className="text-sm font-body text-foreground">{t(`skills.items.${key}`)}</span>
+                <span className="text-xs font-body text-muted-foreground">{skillLevels[i]}%</span>
               </div>
               <div className="h-[2px] bg-secondary rounded-full overflow-hidden">
                 <div
                   className="h-full bg-primary transition-all duration-1000 ease-out rounded-full"
-                  style={{ width: `${skill.level}%` }}
+                  style={{ width: `${skillLevels[i]}%` }}
                 />
               </div>
             </AnimatedSection>

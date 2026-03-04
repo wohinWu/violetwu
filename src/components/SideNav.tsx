@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 
-const sections = ["About", "Skills", "Work", "Education", "Writing", "Speaking", "Contact"];
+const sectionKeys = ["about", "skills", "work", "education", "writing", "speaking", "contact"] as const;
 
 const SideNav = () => {
+  const { t } = useTranslation();
   const [activeSection, setActiveSection] = useState("");
   const [isVisible, setIsVisible] = useState(false);
 
@@ -11,9 +13,9 @@ const SideNav = () => {
     const handleScroll = () => {
       setIsVisible(window.scrollY > window.innerHeight * 0.5);
 
-      const sectionElements = sections.map((s) => ({
-        id: s.toLowerCase(),
-        el: document.getElementById(s.toLowerCase()),
+      const sectionElements = sectionKeys.map((s) => ({
+        id: s,
+        el: document.getElementById(s),
       }));
 
       for (const section of sectionElements.reverse()) {
@@ -44,17 +46,17 @@ const SideNav = () => {
           exit={{ opacity: 0, x: 30 }}
           className="fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-4"
         >
-          {sections.map((section) => (
+          {sectionKeys.map((section) => (
             <button
               key={section}
-              onClick={() => scrollTo(section.toLowerCase())}
+              onClick={() => scrollTo(section)}
               className={`text-xs font-body tracking-widest uppercase text-right transition-all duration-300 ${
-                activeSection === section.toLowerCase()
+                activeSection === section
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              {section}
+              {t(`nav.${section}`)}
             </button>
           ))}
         </motion.nav>

@@ -1,33 +1,23 @@
+import { useTranslation } from "react-i18next";
 import AnimatedSection from "./AnimatedSection";
 
-const education = [
-  {
-    year: "2018",
-    title: "MFA Photography",
-    institution: "Royal College of Art, London",
-    description: "Specialized in documentary and narrative photography with distinction.",
-  },
-  {
-    year: "2015",
-    title: "BFA Visual Arts",
-    institution: "Central Academy of Fine Arts, Beijing",
-    description: "Focused on experimental photography and visual storytelling techniques.",
-  },
-  {
-    year: "2014",
-    title: "Magnum Foundation Workshop",
-    institution: "New York, USA",
-    description: "Intensive program on photojournalism and long-form documentary projects.",
-  },
-];
+type EducationItem = {
+  year: string;
+  title: string;
+  institution: string;
+  description: string;
+};
 
 const EducationSection = () => {
+  const { t } = useTranslation();
+  const education = t("education.items", { returnObjects: true }) as EducationItem[];
+
   return (
     <AnimatedSection id="education" className="py-24 md:py-32 px-8 md:px-16">
       <div className="max-w-4xl">
-        <p className="text-xs font-body tracking-[0.3em] uppercase text-primary mb-6">Education</p>
+        <p className="text-xs font-body tracking-[0.3em] uppercase text-primary mb-6">{t("education.label")}</p>
         <h2 className="font-display text-3xl md:text-4xl font-semibold mb-12">
-          Academic Background
+          {t("education.title")}
         </h2>
         <div className="space-y-12">
           {education.map((edu, i) => (
