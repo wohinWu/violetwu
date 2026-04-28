@@ -87,22 +87,35 @@ export default {
   // Writing
   writing: {
     label: "成果",
-    title: "论文、展示与项目产出",
+    title: "发表与展示",
     articles: [
       {
-        title: "文生图模型偏好驱动优化与可控生成系统",
-        publication: "EvoMUSART 会议论文",
-        date: "2024",
-      },
-      {
-        title: "定制化 Artist Model 与交互式生成 Demo",
-        publication: "SIGGRAPH 2024 Poster",
-        date: "2024",
-      },
-      {
-        title: "创意图像理解能力优化模块",
-        publication: "情感陪伴智能体应用",
+        title:
+          "Large Foundation Models for Trajectory Prediction in Autonomous Driving: A Comprehensive Survey",
+        publication: "arXiv:2509.10570",
         date: "2025",
+      },
+      {
+        title:
+          "Spacetime Dialogue: Integrating Astronomical Data and Khoomei in Spatial Installation",
+        publication: "2024 IEEE VIS Arts Program (VISAP)",
+        date: "2024",
+      },
+      {
+        title:
+          "Steering Large Text-to-Image Model for Kandinsky Synthesis Through Preference-Based Prompt Optimization",
+        publication: "Artificial Intelligence in Music, Sound, Art and Design",
+        date: "2025",
+      },
+      {
+        title: "Kandinsky As You Preferred",
+        publication: "ACM SIGGRAPH 2024 Posters",
+        date: "2024",
+      },
+      {
+        title: "Cell Space: Augmented Awareness of Intercorporeality",
+        publication: "Proceedings of the ACM on Computer Graphics and Interactive Techniques",
+        date: "2024",
       },
     ],
   },

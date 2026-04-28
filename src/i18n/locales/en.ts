@@ -3,7 +3,7 @@ export default {
   hero: {
     photography: "AI & CREATIVE TECH",
     subtitle:
-      "Research master's student in Artificial Intelligence at HKUST(GZ), working across multimodal AI, human-LLM collaboration, and creative AI systems.",
+      "MPhil student in Artificial Intelligence at HKUST(GZ), working across multimodal AI, human-LLM collaboration, and creative AI systems.",
     heroAlt: "Wei Wu personal website hero",
   },
 
@@ -23,7 +23,7 @@ export default {
     label: "About",
     title: "Connecting artificial intelligence, interaction, and visual creativity.",
     para1:
-      "I am pursuing a research master's degree in Artificial Intelligence at HKUST(GZ) with a Red Bird full scholarship. I hold a BSc in Computer Science and Technology from BNU-HKBU United International College, with a minor in Art and Design.",
+      "I am pursuing a master of philosophy degree in Artificial Intelligence at HKUST(GZ) with a Red Bird full scholarship. I hold a BSc in Computer Science and Technology from BNU-HKBU United International College, with a minor in Art and Design.",
     para2:
       "My work focuses on creative understanding in multimodal large models, human-AI collaboration, and controllable generation systems. I also build games and visual design projects, turning research questions into interactive prototypes.",
   },
@@ -88,24 +88,35 @@ export default {
   // Writing
   writing: {
     label: "Outputs",
-    title: "Publications, Posters & Project Outcomes",
+    title: "Publications & Exhibitions",
     articles: [
       {
         title:
-          "Preference-driven Optimization and Controllable Generation for Text-to-Image Models",
-        publication: "EvoMUSART Conference Paper",
+          "Large Foundation Models for Trajectory Prediction in Autonomous Driving: A Comprehensive Survey",
+        publication: "arXiv:2509.10570",
+        date: "2025",
+      },
+      {
+        title:
+          "Spacetime Dialogue: Integrating Astronomical Data and Khoomei in Spatial Installation",
+        publication: "2024 IEEE VIS Arts Program (VISAP)",
         date: "2024",
       },
       {
         title:
-          "Customized Artist Model and Interactive Generation Demo",
-        publication: "SIGGRAPH 2024 Poster",
+          "Steering Large Text-to-Image Model for Kandinsky Synthesis Through Preference-Based Prompt Optimization",
+        publication: "Artificial Intelligence in Music, Sound, Art and Design",
+        date: "2025",
+      },
+      {
+        title: "Kandinsky As You Preferred",
+        publication: "ACM SIGGRAPH 2024 Posters",
         date: "2024",
       },
       {
-        title: "Creative Image Understanding Module for Emotional Companion Agents",
-        publication: "Applied Multimodal AI Project",
-        date: "2025",
+        title: "Cell Space: Augmented Awareness of Intercorporeality",
+        publication: "Proceedings of the ACM on Computer Graphics and Interactive Techniques",
+        date: "2024",
       },
     ],
   },
