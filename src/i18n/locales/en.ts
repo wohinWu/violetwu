@@ -1,58 +1,58 @@
 export default {
   // Hero
   hero: {
-    photography: "PHOTOGRAPHY",
+    photography: "AI & CREATIVE TECH",
     subtitle:
-      "Was named in Aperture Magazine's prestigious \"Visual 100\" list, as one of the Ten Most Compelling Photographers in 2023.",
-    heroAlt: "Photography portfolio hero",
+      "Research master's student in Artificial Intelligence at HKUST(GZ), working across multimodal AI, human-LLM collaboration, and creative AI systems.",
+    heroAlt: "Wei Wu personal website hero",
   },
 
   // Navigation
   nav: {
     about: "About",
     skills: "Skills",
-    work: "Work",
+    work: "Projects",
     education: "Education",
-    writing: "Writing",
-    speaking: "Speaking",
+    writing: "Outputs",
+    speaking: "Experience",
     contact: "Contact",
   },
 
   // About
   about: {
     label: "About",
-    title: "Capturing moments that tell stories beyond words.",
+    title: "Connecting artificial intelligence, interaction, and visual creativity.",
     para1:
-      "With over a decade of experience behind the lens, I specialize in documentary and portrait photography that reveals the extraordinary in everyday life. My work has been featured in international exhibitions and publications.",
+      "I am pursuing a research master's degree in Artificial Intelligence at HKUST(GZ) with a Red Bird full scholarship. I hold a BSc in Computer Science and Technology from BNU-HKBU United International College, with a minor in Art and Design.",
     para2:
-      "Based in Shanghai, I travel globally to capture stories that matter. My approach combines cinematic composition with raw authenticity, creating images that resonate on a deeply human level.",
+      "My work focuses on creative understanding in multimodal large models, human-AI collaboration, and controllable generation systems. I also build games and visual design projects, turning research questions into interactive prototypes.",
   },
 
   // Skills
   skills: {
     label: "Skills",
-    title: "Craftsmanship & Expertise",
+    title: "Research, Engineering & Design",
     items: {
-      portrait: "Portrait Photography",
-      documentary: "Documentary",
-      street: "Street Photography",
-      postProduction: "Post-Production",
-      lighting: "Lighting Design",
-      artDirection: "Art Direction",
+      aiResearch: "AI & Multimodal Research",
+      prototyping: "Python / C# / C++ Prototyping",
+      generativeAI: "Stable Diffusion & Generative AI",
+      gameDevelopment: "Unity Game & Interaction Development",
+      dataAnalysis: "Python / SQL / MATLAB Data Analysis",
+      visualDesign: "Figma / Adobe / Blender Visual Design",
     },
   },
 
   // Work
   work: {
-    label: "Work",
-    title: "Selected Projects",
+    label: "Projects",
+    title: "Selected Research & Creative Work",
     items: [
-      { title: "Shadows & Light", category: "Portrait" },
-      { title: "Neon Dreams", category: "Street" },
-      { title: "Golden Hour", category: "Landscape" },
-      { title: "Intimate Gaze", category: "Portrait" },
-      { title: "Market Stories", category: "Documentary" },
-      { title: "Geometry of Space", category: "Architecture" },
+      { title: "Gamified Human-AI Collaboration System", category: "Human-LLM Collaboration" },
+      { title: "Modeling Creative Understanding in MLLMs", category: "Multimodal AI" },
+      { title: "Preference-driven Text-to-Image Optimization", category: "Generative AI" },
+      { title: "Prompt-free Controllable Generation Tool", category: "Creative Tool" },
+      { title: "Global Game Jam Prototypes", category: "Game Development" },
+      { title: "Campus Culture Visual Systems", category: "Visual Design" },
     ],
   },
 
@@ -62,76 +62,76 @@ export default {
     title: "Academic Background",
     items: [
       {
-        year: "2018",
-        title: "MFA Photography",
-        institution: "Royal College of Art, London",
+        year: "Sep 2024 - Oct 2026",
+        title: "Research Master's in Artificial Intelligence",
+        institution: "The Hong Kong University of Science and Technology (Guangzhou)",
         description:
-          "Specialized in documentary and narrative photography with distinction.",
+          "Red Bird full scholarship, GPA 3.6/4.3. HKUST ranks 44th globally in QS 2025.",
       },
       {
-        year: "2015",
-        title: "BFA Visual Arts",
-        institution: "Central Academy of Fine Arts, Beijing",
+        year: "Sep 2020 - Jun 2024",
+        title: "BSc Computer Science and Technology, Minor in Art and Design",
+        institution: "BNU-HKBU United International College",
         description:
-          "Focused on experimental photography and visual storytelling techniques.",
+          "GPA 3.55/4.0, top 15% in major; scholarship recipient in 2020 and 2022.",
       },
       {
-        year: "2014",
-        title: "Magnum Foundation Workshop",
-        institution: "New York, USA",
+        year: "Language",
+        title: "English Working Proficiency",
+        institution: "TOEFL 102",
         description:
-          "Intensive program on photojournalism and long-form documentary projects.",
+          "Comfortable with English-speaking research, collaboration, and technical documentation.",
       },
     ],
   },
 
   // Writing
   writing: {
-    label: "Writing",
-    title: "Published Works",
+    label: "Outputs",
+    title: "Publications, Posters & Project Outcomes",
     articles: [
       {
         title:
-          "The Art of Seeing: A Photographer's Guide to Visual Storytelling",
-        publication: "Aperture Magazine",
+          "Preference-driven Optimization and Controllable Generation for Text-to-Image Models",
+        publication: "EvoMUSART Conference Paper",
         date: "2024",
       },
       {
         title:
-          "Between Light and Shadow: Finding Beauty in Urban Landscapes",
-        publication: "National Geographic",
-        date: "2023",
+          "Customized Artist Model and Interactive Generation Demo",
+        publication: "SIGGRAPH 2024 Poster",
+        date: "2024",
       },
       {
-        title: "Documentary Photography in the Age of Social Media",
-        publication: "The Guardian",
-        date: "2023",
+        title: "Creative Image Understanding Module for Emotional Companion Agents",
+        publication: "Applied Multimodal AI Project",
+        date: "2025",
       },
     ],
   },
 
   // Speaking
   speaking: {
-    label: "Speaking",
-    title: "Talks & Events",
+    label: "Experience",
+    title: "Additional Practice",
     talks: [
       {
-        title: "Visual Narratives: Photography as Testimony",
-        event: "TEDx Shanghai",
-        date: "March 2024",
-        location: "Shanghai, China",
+        title: "Global Game Jam Rapid Game Development",
+        event: "Youqu Plan Team",
+        date: "2022 / 2023 / 2024 / 2026",
+        location: "Best Team and Best Development site awards",
       },
       {
-        title: "The Ethics of Documentary Photography",
-        event: "World Press Photo Festival",
-        date: "November 2023",
-        location: "Amsterdam, Netherlands",
+        title: "Independent Graphic Designer",
+        event: "Long-term collaboration with local cultural studios in Guangdong",
+        date: "2018 - Present",
+        location: "20+ campus culture product visual systems",
       },
       {
-        title: "From Street to Gallery: Bridging Commercial and Fine Art",
-        event: "Photo London",
-        date: "May 2023",
-        location: "London, UK",
+        title: "Human-LLM Collaboration User Research",
+        event: "Workflow interviews and thematic analysis",
+        date: "2025 - Present",
+        location: "10 heavy users interviewed",
       },
     ],
   },
@@ -139,13 +139,15 @@ export default {
   // Contact
   contact: {
     label: "Contact",
-    title1: "Let's create",
-    title2: "something together.",
+    title1: "Let's connect",
+    title2: "and collaborate.",
     description:
-      "Available for commissions, collaborations, and exhibition opportunities. Reach out to discuss your project.",
-    email: "hello@example.com",
-    copyright: "© 2024 Wei WU. All rights reserved.",
-    crafted: "Crafted with passion & precision",
+      "Open to conversations around AI research, creative tools, human-AI collaboration, game prototypes, and visual design.",
+    email: "wohin_wu@163.com",
+    phone: "+86 15013110868",
+    website: "violetwu.com",
+    copyright: "© 2026 Wei WU. All rights reserved.",
+    crafted: "AI Research | Creative Technology | Design",
   },
 
   // 404

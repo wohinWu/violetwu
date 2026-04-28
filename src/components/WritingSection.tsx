@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import AnimatedSection from "./AnimatedSection";
-import { ExternalLink } from "lucide-react";
 
 type Article = {
   title: string;
@@ -22,20 +21,16 @@ const WritingSection = () => {
         <div className="space-y-0 divide-y divide-border">
           {articles.map((article, i) => (
             <AnimatedSection key={article.title} delay={i * 0.1}>
-              <a
-                href="#"
-                className="flex items-start justify-between py-6 group"
-              >
+              <div className="py-6">
                 <div>
-                  <h3 className="font-display text-lg font-semibold group-hover:text-primary transition-colors">
+                  <h3 className="font-display text-lg font-semibold">
                     {article.title}
                   </h3>
                   <p className="text-sm font-body text-muted-foreground mt-1">
                     {article.publication} · {article.date}
                   </p>
                 </div>
-                <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1 ml-4" />
-              </a>
+              </div>
             </AnimatedSection>
           ))}
         </div>

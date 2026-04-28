@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import heroBg from "@/assets/hero-bg.jpg";
-import { Mail, Instagram, Video } from "lucide-react";
+import { Globe, Mail, Phone } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const HeroSection = () => {
@@ -22,14 +22,26 @@ const HeroSection = () => {
       {/* Top nav links */}
       <div className="absolute top-8 right-8 flex items-center gap-4 z-10">
         <LanguageSwitcher />
-        <a href="mailto:hello@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+        <a
+          href={`mailto:${t("contact.email")}`}
+          className="text-muted-foreground hover:text-primary transition-colors"
+          aria-label="Email Wei Wu"
+        >
           <Mail className="w-4 h-4" />
         </a>
-        <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-          <Instagram className="w-4 h-4" />
+        <a
+          href="tel:+8615013110868"
+          className="text-muted-foreground hover:text-primary transition-colors"
+          aria-label="Call Wei Wu"
+        >
+          <Phone className="w-4 h-4" />
         </a>
-        <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-          <Video className="w-4 h-4" />
+        <a
+          href={`https://${t("contact.website")}`}
+          className="text-muted-foreground hover:text-primary transition-colors"
+          aria-label="Visit Wei Wu's website"
+        >
+          <Globe className="w-4 h-4" />
         </a>
       </div>
 

@@ -1,8 +1,15 @@
 import { useTranslation } from "react-i18next";
 import AnimatedSection from "./AnimatedSection";
 
-const skillKeys = ["portrait", "documentary", "street", "postProduction", "lighting", "artDirection"] as const;
-const skillLevels = [95, 90, 85, 88, 92, 80];
+const skillKeys = [
+  "aiResearch",
+  "prototyping",
+  "generativeAI",
+  "gameDevelopment",
+  "dataAnalysis",
+  "visualDesign",
+] as const;
+const skillLevels = [90, 88, 86, 84, 82, 90];
 
 const SkillsSection = () => {
   const { t } = useTranslation();

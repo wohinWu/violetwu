@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import AnimatedSection from "./AnimatedSection";
-import { Mail, Instagram, Video } from "lucide-react";
+import { Globe, Mail, Phone } from "lucide-react";
 
 const ContactSection = () => {
   const { t } = useTranslation();
@@ -15,7 +15,7 @@ const ContactSection = () => {
         <p className="text-muted-foreground font-body text-sm max-w-md mb-12 leading-relaxed">
           {t("contact.description")}
         </p>
-        <div className="flex gap-6">
+        <div className="flex flex-wrap gap-6">
           <a
             href={`mailto:${t("contact.email")}`}
             className="flex items-center gap-2 text-sm font-body text-foreground hover:text-primary transition-colors"
@@ -24,18 +24,18 @@ const ContactSection = () => {
             {t("contact.email")}
           </a>
           <a
-            href="#"
+            href="tel:+8615013110868"
             className="flex items-center gap-2 text-sm font-body text-foreground hover:text-primary transition-colors"
           >
-            <Instagram className="w-4 h-4" />
-            Instagram
+            <Phone className="w-4 h-4" />
+            {t("contact.phone")}
           </a>
           <a
-            href="#"
+            href={`https://${t("contact.website")}`}
             className="flex items-center gap-2 text-sm font-body text-foreground hover:text-primary transition-colors"
           >
-            <Video className="w-4 h-4" />
-            Vimeo
+            <Globe className="w-4 h-4" />
+            {t("contact.website")}
           </a>
         </div>
 
