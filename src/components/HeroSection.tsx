@@ -14,7 +14,7 @@ const HeroSection = () => {
         <img
           src={heroBg}
           alt={t("hero.heroAlt")}
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/20" />
       </div>
