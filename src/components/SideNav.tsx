@@ -2,7 +2,14 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 
-const sectionKeys = ["about", "skills", "work", "education", "writing", "speaking", "contact"] as const;
+const sectionKeys = [
+  "about",
+  "projects",
+  "creative",
+  "publications",
+  "education",
+  "contact",
+] as const;
 
 const SideNav = () => {
   const { t } = useTranslation();
@@ -18,7 +25,7 @@ const SideNav = () => {
         el: document.getElementById(s),
       }));
 
-      for (const section of sectionElements.reverse()) {
+      for (const section of [...sectionElements].reverse()) {
         if (section.el) {
           const rect = section.el.getBoundingClientRect();
           if (rect.top <= window.innerHeight / 2) {

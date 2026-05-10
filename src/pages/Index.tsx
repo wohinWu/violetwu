@@ -1,11 +1,10 @@
 import HeroSection from "@/components/HeroSection";
 import SideNav from "@/components/SideNav";
 import AboutSection from "@/components/AboutSection";
-import SkillsSection from "@/components/SkillsSection";
-import WorkSection from "@/components/WorkSection";
-import EducationSection from "@/components/EducationSection";
-import WritingSection from "@/components/WritingSection";
-import SpeakingSection from "@/components/SpeakingSection";
+import FeaturedProjects from "@/components/FeaturedProjects";
+import CreativePractice from "@/components/CreativePractice";
+import PublicationsSection from "@/components/PublicationsSection";
+import EducationExperience from "@/components/EducationExperience";
 import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
@@ -14,11 +13,10 @@ const Index = () => {
       <SideNav />
       <HeroSection />
       <AboutSection />
-      <SkillsSection />
-      <WorkSection />
-      <EducationSection />
-      <WritingSection />
-      <SpeakingSection />
+      <FeaturedProjects />
+      <CreativePractice />
+      <PublicationsSection />
+      <EducationExperience />
       <ContactSection />
     </main>
   );
