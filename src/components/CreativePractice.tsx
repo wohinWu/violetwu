@@ -27,34 +27,27 @@ const CreativePractice = () => {
           {creativeItems.map((item, i) => {
             const Icon = iconMap[item.icon as keyof typeof iconMap];
             const isGallery = item.linkType === "gallery";
-
-            const content = (
-              <div className="bg-card border border-border p-6 hover:border-primary/30 transition-colors group h-full flex flex-col">
-                <Icon className="w-5 h-5 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-display text-lg font-semibold mb-2">
-                  {t(`creative.items.${item.id}.title`)}
-                </h3>
-                <p className="text-sm font-body text-muted-foreground leading-relaxed flex-1 mb-4">
-                  {t(`creative.items.${item.id}.description`)}
-                </p>
-                {isGallery && (
-                  <div className="flex items-center gap-1.5 text-xs font-body tracking-widest uppercase text-foreground group-hover:text-primary transition-colors">
-                    {t("creative.viewGallery")}
-                    <ArrowRight className="w-3 h-3" />
-                  </div>
-                )}
-              </div>
-            );
+            const ctaLabel = isGallery
+              ? t("creative.viewGallery")
+              : t("creative.viewMore");
 
             return (
               <AnimatedSection key={item.id} delay={i * 0.12}>
-                {isGallery && item.link ? (
-                  <Link to={item.link} className="block h-full">
-                    {content}
-                  </Link>
-                ) : (
-                  content
-                )}
+                <Link to={item.link} className="block h-full">
+                  <div className="bg-card border border-border p-6 hover:border-primary/30 transition-colors group h-full flex flex-col">
+                    <Icon className="w-5 h-5 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                    <h3 className="font-display text-lg font-semibold mb-2">
+                      {t(`creative.items.${item.id}.title`)}
+                    </h3>
+                    <p className="text-sm font-body text-muted-foreground leading-relaxed flex-1 mb-4">
+                      {t(`creative.items.${item.id}.description`)}
+                    </p>
+                    <div className="flex items-center gap-1.5 text-xs font-body tracking-widest uppercase text-foreground group-hover:text-primary transition-colors">
+                      {ctaLabel}
+                      <ArrowRight className="w-3 h-3" />
+                    </div>
+                  </div>
+                </Link>
               </AnimatedSection>
             );
           })}

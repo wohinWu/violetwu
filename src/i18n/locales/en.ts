@@ -6,7 +6,7 @@ export default {
     demo: "Demo",
     github: "GitHub",
     external: "Link",
-    backToHome: "← Back to Home",
+    backToHome: "Back to Home",
     viewAll: "View All",
   },
 
@@ -149,6 +149,8 @@ export default {
   creative: {
     label: "Creative Practice",
     title: "Beyond Research",
+    viewMore: "View Works",
+    viewGallery: "View Gallery",
     items: {
       gamePrototypes: {
         title: "Game Prototypes",
@@ -166,7 +168,50 @@ export default {
           "Ongoing practice in urban, nature, travel, and abstract photography. Exploring the intersection of computational aesthetics and visual storytelling.",
       },
     },
-    viewGallery: "View Gallery",
+    games: {
+      pageTitle: "Game Prototypes",
+      pageSubtitle: "Playable prototypes and game jam works exploring local multiplayer, strategy simulation, social systems, and choice-driven interaction.",
+      items: {
+        "one-of-the-turkeys": {
+          title: "One Of The Turkeys",
+          summary:
+            "A same-screen local two-player game where one player hides among turkeys and escapes, while the farmer tries to identify and stop them before time or bullets run out.",
+        },
+        "three-generation-wealth": {
+          title: "Three-generation Wealth",
+          summary:
+            "A merchant simulation game built during TapTap Spotlight's 21-day game creation challenge.",
+        },
+        "social-media-censorship": {
+          title: "Social Media Censorship",
+          summary:
+            "A strategy simulation and click-interaction game where players moderate posts in a fictional country while balancing class, ethnicity, diversity, morality, and regime stability.",
+        },
+        "top-underachiever": {
+          title: "Top & Underachiever",
+          summary:
+            "A card-based school simulator with dark humor, where players drag decision cards to become either a top student or an underachiever.",
+        },
+      },
+    },
+    design: {
+      pageTitle: "Visual Design",
+      pageSubtitle: "Campus culture visual systems and graphic design projects created as an independent designer since 2018.",
+      items: {
+        "campus-culture-1": {
+          title: "Campus Culture Visual System I",
+          summary: "Brand identity and merchandise design for university cultural products.",
+        },
+        "campus-culture-2": {
+          title: "Campus Culture Visual System II",
+          summary: "Visual system design for campus cultural festival and products.",
+        },
+        "campus-culture-3": {
+          title: "Campus Culture Visual System III",
+          summary: "Visual identity and merchandise design for campus creative studio.",
+        },
+      },
+    },
   },
 
   // Publications
@@ -257,7 +302,7 @@ export default {
       colorAbstract: "Color & Abstract",
       dailyLife: "Daily Life",
     },
-    backToHome: "← Back",
+    backToHome: "Back",
   },
 
   // 404

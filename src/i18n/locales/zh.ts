@@ -6,7 +6,7 @@ export default {
     demo: "演示",
     github: "GitHub",
     external: "链接",
-    backToHome: "← 返回首页",
+    backToHome: "返回首页",
     viewAll: "查看全部",
   },
 
@@ -37,14 +37,14 @@ export default {
     label: "关于",
     title: "连接人工智能、交互体验与视觉创意。",
     para1:
-      "我目前在香港科技大学（广州）攻读研究型人工智能硕士，获得红鸟全额奖学金。本科毕业于北师-香港浸会大学计算机科学与技术专业，并辅修艺术与设计。",
+      "我目前在香港科技大学（广州）攻读研究型人工智能硕士。本科毕业于北师-香港浸会大学计算机科学与技术专业，并辅修艺术与设计。",
     para2:
       "我的工作聚焦多模态大模型的创意理解、人机协作机制与可控生成系统，也长期参与游戏开发和平面设计，擅长把研究问题快速转化为可体验的原型。",
     capabilities: {
       aiResearch: {
-        title: "AI 研究",
+        title: "研究",
         description:
-          "多模态大模型、创意理解评估、人机协作机制、偏好驱动生成。",
+          "创意理解评估、人机协作机制、偏好驱动生成。",
       },
       productPrototyping: {
         title: "产品与交互原型",
@@ -149,6 +149,8 @@ export default {
   creative: {
     label: "创意实践",
     title: "研究之外",
+    viewMore: "查看作品",
+    viewGallery: "浏览图集",
     items: {
       gamePrototypes: {
         title: "游戏原型",
@@ -166,7 +168,50 @@ export default {
           "持续在城市、自然、旅行与抽象摄影领域实践，探索计算美学与视觉叙事的交汇。",
       },
     },
-    viewGallery: "浏览图集",
+    games: {
+      pageTitle: "游戏原型",
+      pageSubtitle: "游戏 Jam 与独立实验中的可玩原型，探索本地多人、策略模拟、社会系统与选择式交互。",
+      items: {
+        "one-of-the-turkeys": {
+          title: "其中一只火鸡 / One Of The Turkeys",
+          summary:
+            "一款双人同屏本地联机游戏：一名玩家扮演混在火鸡群中的火鸡，寻找钥匙逃离农场；另一名玩家扮演农场主，需要在时间或子弹耗尽前识破并阻止对方。",
+        },
+        "three-generation-wealth": {
+          title: "富得过三代",
+          summary:
+            "一款行商模拟游戏，来自 TapTap 聚光灯 2024 年 21 天游戏创作挑战。",
+        },
+        "social-media-censorship": {
+          title: "社交媒体审查员 / Social Media Censorship",
+          summary:
+            "一款策略模拟、点击互动型游戏。玩家扮演虚构国家中的社交媒体审查员，通过审核帖子平衡阶级、民族、多样性、道德和政权五个社会倾向。",
+        },
+        "top-underachiever": {
+          title: "优生差生模拟器 / Top & Underachiever",
+          summary:
+            "一款带有黑色幽默的卡牌选择校园模拟器。玩家拖动卡牌到判定区域做出选择，走上成为优等生或差生的道路。",
+        },
+      },
+    },
+    design: {
+      pageTitle: "视觉设计",
+      pageSubtitle: "自 2018 年起作为独立设计师创作的高校文创视觉系统和平面设计项目。",
+      items: {
+        "campus-culture-1": {
+          title: "高校文创视觉系统 I",
+          summary: "大学文化产品的品牌标识与周边设计。",
+        },
+        "campus-culture-2": {
+          title: "高校文创视觉系统 II",
+          summary: "校园文化节及文创产品的视觉系统设计。",
+        },
+        "campus-culture-3": {
+          title: "高校文创视觉系统 III",
+          summary: "校园创意工作室的视觉标识与周边设计。",
+        },
+      },
+    },
   },
 
   // Publications
@@ -257,7 +302,7 @@ export default {
       colorAbstract: "色彩与抽象",
       dailyLife: "日常",
     },
-    backToHome: "← 返回",
+    backToHome: "返回",
   },
 
   // 404

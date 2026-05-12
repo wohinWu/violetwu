@@ -1,14 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, ImageOff } from "lucide-react";
 import { photoCategories, type PhotoCategory } from "@/data/creative";
+import { photos } from "@/data/photos";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const PhotoGallery = () => {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState<PhotoCategory | "all">("all");
+
+  const filtered =
+    activeCategory === "all"
+      ? photos
+      : photos.filter((p) => p.category === activeCategory);
 
   return (
     <main className="min-h-screen bg-background">
@@ -76,23 +82,49 @@ const PhotoGallery = () => {
           ))}
         </motion.nav>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3"
-        >
-          {/* Placeholder grid — replace with actual photos */}
-          {Array.from({ length: 12 }).map((_, i) => (
-            <div
-              key={i}
-              className="break-inside-avoid bg-secondary/30 border border-border flex items-center justify-center text-muted-foreground/20 font-display text-2xl"
-              style={{ aspectRatio: i % 3 === 0 ? "3/4" : i % 3 === 1 ? "4/3" : "1/1" }}
-            >
-              {String(i + 1).padStart(2, "0")}
-            </div>
-          ))}
-        </motion.div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3"
+          >
+            {filtered.length === 0 ? (
+              <div className="col-span-full flex flex-col items-center justify-center py-24 text-muted-foreground/40">
+                <ImageOff className="w-10 h-10 mb-3" />
+                <p className="text-sm font-body">No photos yet</p>
+              </div>
+            ) : (
+              filtered.map((photo, i) => (
+                <motion.div
+                  key={photo.src}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.04 }}
+                  className="break-inside-avoid relative group"
+                  onContextMenu={(e) => e.preventDefault()}
+                >
+                  <img
+                    src={photo.src}
+                    alt={photo.alt ?? ""}
+                    loading="lazy"
+                    draggable={false}
+                    onDragStart={(e) => e.preventDefault()}
+                    className="w-full rounded-sm hover:opacity-90 transition-opacity select-none"
+                  />
+                  {/* Transparent overlay to block direct img interaction */}
+                  <div className="absolute inset-0 rounded-sm" />
+                  {/* Watermark */}
+                  <span className="absolute bottom-2 right-2 text-[10px] text-white/50 font-body tracking-wider select-none pointer-events-none drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+                    _violetwu_
+                  </span>
+                </motion.div>
+              ))
+            )}
+          </motion.div>
+        </AnimatePresence>
 
         <motion.footer
           initial={{ opacity: 0 }}

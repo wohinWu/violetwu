@@ -1,14 +1,37 @@
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
 User-agent: Googlebot
 Allow: /
+Disallow: /photos/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /photos/
 
 User-agent: Twitterbot
 Allow: /
+Disallow: /photos/
 
 User-agent: facebookexternalhit
 Allow: /
+Disallow: /photos/
 
 User-agent: *
 Allow: /
+Disallow: /photos/
