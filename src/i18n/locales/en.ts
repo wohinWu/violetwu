@@ -37,12 +37,12 @@ export default {
     label: "About",
     title: "Connecting artificial intelligence, interaction, and visual creativity.",
     para1:
-      "I am pursuing a master of philosophy degree in Artificial Intelligence at HKUST(GZ) with a Red Bird full scholarship. I hold a BSc in Computer Science and Technology from BNU-HKBU United International College, with a minor in Art and Design.",
+      "I am pursuing a master of philosophy degree in Artificial Intelligence at HKUST(GZ). I hold a BSc in Computer Science and Technology from BNBU, with a minor in Art and Design.",
     para2:
       "My work focuses on creative understanding in multimodal large models, human-AI collaboration, and controllable generation systems. I also build games and visual design projects, turning research questions into interactive prototypes.",
     capabilities: {
       aiResearch: {
-        title: "AI Research",
+        title: "Research",
         description:
           "Multimodal large models, creative understanding benchmarks, human-LLM collaboration, and preference-driven generation.",
       },
